@@ -1,12 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My online store</title>
+    <title>Frame | Made to be Seen </title>
+    <!-- Connects the HTML file to the CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
+    <!-- Navigation -->
+    <!-- The nav contains the website logo, navigation links, and cart link -->
+    <header class="header">
+        <!-- Logo and tagline -->
+        <div class="logo">
+            FRAME
+            <p>Made to be Seen</p>
+        </div>
+        <!-- Navigation links connect to different sections on the same page -->
+        <nav class="navigation">
+            <!-- #collection takes the user to the section with id="collection" -->
+            <a href="#collection">Shop</a>
+            <a href="#powers">Collections</a>
+            <a href="#about"> About</a>
+        </nav>
+        <!-- Cart link -->
+        <div class="cart">
+            <!-- # is used because there is no separate cart page for this assignment -->
+            <a href="#">Cart</a>
+        </div>
+
+    </header>
+
+    <!-- Hero section  -->
+    <section class="hero">
+
+        <!-- Text portion of the hero -->
+        <div class="hero-text">
+
+            <!-- I named the "eyebrow" to refer to the small introductory heading before the main text -->
+            <p class="eyebrow"> Contemporary Eyewear </p>
+
+            <!-- Main heading of the website -->
+            <h1>See yourself <br> Differently.</h1>
+
+            <!-- Short description introducing the brand -->
+            <p class="hero-description"> Your glasses aren't just something you wear to see, they are part of how you
+                express yourself.</p>
+
+            <!-- Button that takes the user to the product collection -->
+            <a href="#collection" class="button"> Shop Frames</a>
+        </div>
+
+        <div class="hero-image">
+            <!-- Alt text describes the image for accessibility -->
+            <img src="img/hero.jpeg" alt="Model wearing a cat-eye FRAME eyeglasses design">
+        </div>
+
+    </section>
+
+    <!-- Brand Statement -->
+
+    <!-- The id allows the navigation bar to link directly to this section -->
+    <section class="statement" id="about">
+
+        <p class="eyebrow">The FRAME Philosophy</p>
+
+        <h2> More Than a Frame. <br> A Point Of View. </h2>
+
+        <p class="statement-description">FRAME creates contemporary eyewear for people who see personal style as a form
+            of self-expression.</p>
+
+    </section>
+
+    <!-- Power section -->
+    <!-- This section introduces the four different "powers" associated with FRAME's designs -->
+
+    <section class="powers" id="powers">
+
+        <div class="section-heading">
+
+            <p class="eyebrow"> FIND YOUR FRAME</p>
+
+            <h2> What's your frame?</h2>
+
+            <p class="section-description"> Every frame has a power. Find the one that feels like you.</p>
+        </div>
+
+        <!-- Container for the four power cards -->
+        <!-- got the unicode Characters from https://www.compart.com/en/unicode/category/So -->
+        <div class="power-grid">
+            <!-- Power Card 1 -->
+            <div class="power-card">
+                <!-- Geometric symbol used as a visual element -->
+                <span class="shape">□</span>
+                <h3>Clarity</h3>
+                <p>See the details</p>
+            </div>
+            <!-- Power Card 2 -->
+            <div class="power-card">
+                <span class="shape">⌁</span>
+                <h3>Confidence</h3>
+                <p>Own your presence</p>
+            </div>
+            <!-- Power Card 3 -->
+            <div class="power-card">
+                <span class="shape">◇</span>
+                <h3>Creativity</h3>
+                <p> See new possibilities</p>
+            </div>
+            <!-- Power Card 4 -->
+            <div class="power-card">
+                <span class="shape">⬡</span>
+                <h3>Boldness</h3>
+                <p>Stand apart</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Product section -->
+
+    <!-- A section groups related content together. This section contains all of the products in the collection. The id allows navigation links to jump to this section. -->
+    <section class="collection" id="collection">
+
+        <div class="section-heading">
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2>Find Your Frame.</h2>
+            <p class="section-description">Six geometric silhouettes. Six different powers.</p>
+        </div>
+
+
+        <!-- Product grid contains all six products -->
+        <div class="product-grid">
+
+            <!-- Each product is an independent piece of content, so I use the <article> element.  The article contains everything related to one product. -->
+
+            <!-- The Focus -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/focus.png" alt="The Focus rectangular black eyeglasses frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">01</p>
+
+                    <h3>The Focus</h3>
+                    <p class="power">Power - Clarity </p>
+
+                    <p class="price">$85</p>
+                    <!-- Placeholder product link -->
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+            </article>
+
+            <!-- The Muse -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/muse.png" alt="The Muse cat-eye eyeglass frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">02</p>
+
+                    <h3>The Muse</h3>
+                    <p class="power">Power - Confidence </p>
+
+                    <p class="price">$95</p>
+
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- The Edge -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/edge.png" alt="The Edge black hexagonal eyeglass frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">03</p>
+
+                    <h3>The Edge</h3>
+                    <p class="power">Power - Boldness </p>
+
+                    <p class="price">$90</p>
+
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- The Visionary -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/visionary.png" alt="The Visionary angular olive green eyeglass frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">04</p>
+
+                    <h3>The Visionary</h3>
+                    <p class="power">Power - Creativity </p>
+
+                    <p class="price">$110</p>
+
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- The Balance -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/balance.png" alt="The Balance rounded cream eyeglass frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">05</p>
+
+                    <h3>The Balance</h3>
+                    <p class="power">Power - Calm </p>
+
+                    <p class="price">$80</p>
+
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- The Shift -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="img/shift.png" alt="The Shift asymmetrical warm brown eyeglass frame">
+                </div>
+
+                <div class="product-info">
+                    <p class="product-number">06</p>
+
+                    <h3>The Shift</h3>
+                    <p class="power">Power - Individuality</p>
+
+                    <p class="price">$105</p>
+
+                    <a href="#" class="product-button">
+                        View Frame
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Editorial section -->
+    <!-- This section adds an editorial/fashion element to the e-commerce homepage -->
+    <section class="editorial">
+        <div class="editorial-image">
+            <img src="img/hero.jpeg" alt="Editorial image representing the FRAME eyewear collection">
+        </div>
+
+        <div class="editorial-text">
+            <p class="eyebrow"> THE FRAME PHILOSOPHY</p>
+            <h2>Made To <br> Be Seen</h2>
+            <p class="editorial-description">Designed for the way you see the world. FRAME brings together geometric
+                design, individuality, and everyday wearability.</p>
+
+            <!-- Links back to the product collection -->
+            <a href="#collection" class="button">
+                Explore Frames
+            </a>
+        </div>
+    </section>
+
+    <!-- Promotion section  -->
+
+    <section class="promotion">
+        <p class="eyebrow"> WELCOME TO FRAME</p>
+        <h2>Your First Frame</h2>
+        <p class="promotion-description"> Get 10% off your first order</p>
+        <a href="#collection" class="button">
+            Shop now
+        </a>
+    </section>
+
+    <!-- footer -->
+    <!-- Footer contains brand information, navigation links, and copyright -->
+    <footer class="footer">
+
+        <!-- Footer brand information -->
+        <div class="footer-brand">
+            <h2>FRAME</h2>
+            <p> Made to be seen</p>
+        </div>
+
+        <!-- Footer shop links -->
+        <div class="footer-links">
+            <h3>Shop</h3>
+            <a href="#collection">Frames</a>
+            <a href="#powers">Collections</a>
+        </div>
+
+        <!-- Footer about links -->
+        <div class="footer-about">
+            <h3>About</h3>
+            <a href="#about">Our Story</a>
+            <!-- Using <a> as a placeholder but also as an achor element so that I can style it -->
+            <a>Contact</a>
+        </div>
+        <!-- Copyright information -->
+        <div class="copyright">
+            <p> © 2026 FRAME. All rights reserved</p>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>

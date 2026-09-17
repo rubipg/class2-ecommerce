@@ -1,0 +1,625 @@
+/* Cream - #FEFAE0  Main background and light text */
+/*Dark Green - #283618 Main text, buttons, borders, dark section */
+/*Olive Green - #606C38 Button hover */
+/*Gold - #DDA15E Accent color for eyebrow headings*/
+
+
+/* basic styles for the entire page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FEFAE0;
+    color: #283618;
+    line-height: 1.6;
+}
+
+/* Makes links inherit the color of the element they are inside instead of using the browser's default blue link color. */
+/*  "inherit" means the link takes the color from its parent element. */
+/* text-decoration: none removes the default underline from links. I add underlines back later for the navigation hover effect. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+
+/* Flexbox places the logo, navigation, and cart in a flexible row. */
+.header {
+    display: flex;
+    align-items: center;
+    /* Places the first item at the beginning, the last item at the end, and distributes the available space between them. */
+    justify-content: space-between;
+    /*  25px = top and bottom padding. 6% = left and right padding. Using % for the horizontal padding allows the spacing to adjust as the screen gets wider or smaller. */
+    padding: 25px 6%;
+    background-color: #FEFAE0;
+}
+
+/* ------------------------------------------------------- */
+
+
+/* FRAME Logo */
+/* Makes the logo container a flex container */
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    /* Converts the text to uppercase even though the HTML text does not have to be typed in uppercase. */
+    text-transform: uppercase;
+    /* A negative value moves the tagline slightly upward, creating tighter spacing between the logo and tagline. */
+    margin-top: -3px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Navigation */
+.navigation {
+    display: flex;
+    /*  gap creates equal space between the navigation links without needing to add margins to each link. */
+    gap: 35px;
+}
+
+.navigation a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Cart */
+.cart a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Hero section */
+.hero {
+    /* Grid is used because the hero has two main columns: the text and the image. */
+    display: grid;
+    /* Creates two equal columns. "1fr" means one fraction of the available space. Since both columns are 1fr, they each receive an equal amount of space. */
+    grid-template-columns: 1fr 1fr;
+    /* The hero will be at least 80% of the height of the viewport. */
+    /*  "vh" means viewport height. 80vh = 80% of the visible browser window height */
+    min-height: 80vh;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 6%;
+}
+
+/* Hero text area */
+.hero-text {
+    /* Prevents the text from becoming too wide on large screens, which keeps it easier to read. "max-width" sets the largest width the element is allowed to reach. */
+    max-width: 550px;
+
+}
+
+/* Small uppercase text above the heading */
+.eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* main hero heading */
+.hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+/* description underneath the heading */
+.hero-description {
+    max-width: 450px;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Brand Statement */
+.statement {
+    text-align: center;
+    /*  Adds large vertical spacing (breathing room) and 10% horizontal spacing around the content.  */
+    padding: 140px 10%;
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+/* Statement heading */
+.statement h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+/* statement paragraph */
+.statement-description {
+    max-width: 650px;
+    /*  "0 auto" means: 0px top and bottom margin. auto left and right margins. */
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Make the eyebrow slightly lighter */
+.statement .eyebrow {
+    color: #dda15e;
+}
+
+/* ------------------------------------------------------- */
+
+/* Main buttons */
+.button {
+    display: inline-block;
+    background-color: #283618;
+    color: #FEFAE0;
+    padding: 14px 28px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Power section */
+.powers {
+    padding: 120px 6%;
+    background-color: #FEFAE0;
+}
+
+/* heading for the section */
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+
+.section-description {
+    font-size: 16px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Grid that hold the four power cards */
+.power-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* individual Power cards */
+.power-card {
+    border: 1px solid #283618;
+    padding: 45px 30px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* The Geometric symbols */
+.shape {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+/* Power card heading */
+.power-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+/* power card descriptions */
+.power-card p {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Product Collection */
+.collection {
+    padding: 120px 6%;
+    background-color: #FEFAE0;
+}
+
+/* Three product pards per row */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 25px;
+}
+
+/* product image area */
+.product-image {
+    /* 100% means the image container fills the width of its grid column.  */
+    width: 100%;
+    height: 400px;
+    /* Hides any part of an image that extends outside the boundaries of the container */
+    overflow: hidden;
+    background-color: #FEFAE0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    /* contain keeps the entire image visible without cropping it. */
+    object-fit: contain;
+}
+
+/* Product number */
+.product-number {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Product name */
+.product-info h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* Product power */
+.power {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Product price */
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    /* 15px top/bottom
+       20px left/right  */
+    margin: 15px 0 20px;
+}
+
+/* View Frame Buttton */
+.product-button {
+    display: inline-block;
+    border: 1px solid #283618;
+    padding: 10px 18px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Button Hover Effects */
+.button:hover {
+    background-color: #606c38;
+}
+
+.product-button:hover {
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+/* ------------------------------------------------------- */
+
+/* Hero image container */
+.hero-image {
+    width: 100%;
+    height: 650px;
+}
+
+/* Hero image */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    /* cover makes the image completely fill the container while keeping its proportions */
+    object-fit: cover;
+}
+
+/* ------------------------------------------------------- */
+
+/* Nav Hover Effects */
+
+/* The comma allows the same styles to be applied to both navigation links and the cart link. */
+.navigation a:hover,
+.cart a:hover {
+    /* Adds an underline when the mouse is over the navigation or cart link. */
+    text-decoration: underline;
+    /* Adds 5px of space between the text and the underline. */
+    text-underline-offset: 5px;
+
+}
+
+/* ------------------------------------------------------- */
+
+/* Editorial section */
+.editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding: 120px 6%;
+    background-color: #FEFAE0;
+}
+
+/* Editorial image */
+.editorial-image {
+    width: 100%;
+    height: 550px;
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Editorial text */
+.editorial-text {
+    max-width: 500px;
+}
+
+.editorial-text h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.editorial-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------------------------- */
+
+/* Promotion section */
+.promotion {
+    text-align: center;
+    padding: 120px 6%;
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+.promotion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 55px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.promotion-description {
+    margin-bottom: 30px;
+}
+
+/* Gold accent for the small heading */
+.promotion .eyebrow {
+    color: #DDA15E;
+}
+
+/* ------------------------------------------------------- */
+
+/* footer */
+.footer {
+    display: grid;
+    /* The first column is twice the size of the
+       other two columns.
+       2fr = two fractions
+       1fr = one fraction
+       1fr = one fraction */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding: 70px 6% 30px;
+    background-color: #FEFAE0;
+}
+
+
+/* Footer brand */
+.footer-brand h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Footer headings */
+.footer h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Footer links */
+.footer-links,
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer a {
+    font-size: 14px;
+}
+
+.copyright p {
+    font-size: 12px;
+}
+
+/* ------------------------------------------ */
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    /* Hero becomes slightly smaller */
+    .hero {
+        gap: 30px;
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    /* Four power cards become two columns */
+    .power-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Three products become two columns */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Editorial stays two columns but has less space */
+    .editorial {
+        gap: 40px;
+        padding: 90px 5%;
+    }
+
+    .editorial-text h2 {
+        font-size: 48px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    /* Header */
+    .header {
+        padding: 20px 5%;
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    /* Condeses the navigation bar */
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a,
+    .cart a {
+        font-size: 10px;
+    }
+
+    /* Hero becomes one column and the text and image are stack verically */
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 5%;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    /* Statement */
+    .statement {
+        padding: 90px 7%;
+    }
+
+    .statement h2 {
+        font-size: 38px;
+    }
+
+    /* Power section */
+    .powers {
+        padding: 50px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+    /* Changes the power cards from one column per row to a single-column layout. This makes each card full-width on mobile. */
+    .power-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Product collection */
+    .collection {
+        padding: 90px 5%;
+    }
+
+    /* Changes the product grid to one column so products stack vertically on mobile. */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 400px;
+    }
+
+    /* Editorial */
+    /* Changes the editorial section from two columns to one column on mobile. */
+    .editorial {
+        grid-template-columns: 1fr;
+        padding: 90px 5%;
+        gap: 40px;
+    }
+
+    .editorial-image {
+        height: 450px;
+    }
+
+    .editorial-text h2 {
+        font-size: 48px;
+    }
+
+    /* Promotion */
+    .promotion {
+        padding: 50px 5%;
+    }
+
+    .promotion h2 {
+        font-size: 42px;
+    }
+
+    /* Footer */
+    /* Changes the footer from three columns to two columns on mobile. */
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 60px 5% 30px;
+    }
+}
